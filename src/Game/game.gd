@@ -9,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func perder():
+	print("Perdiste")
+	get_tree().change_scene_to_file("res://src/Menu/menu.tscn")

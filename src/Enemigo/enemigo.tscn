@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://v2ltbt0u0bk8" path="res://assets/icon.svg" id="2_ivmpe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf8k4"]
-size = Vector2(195.5, 114)
+size = Vector2(342, 195)
 
-[node name="Enemigo" type="CharacterBody2D" unique_id=779072344]
+[node name="Enemigo" type="CharacterBody2D" unique_id=1105322210]
 script = ExtResource("1_qjxqm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=880319377]
-position = Vector2(97.75, 57)
+position = Vector2(171, 97.5)
 shape = SubResource("RectangleShape2D_gf8k4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=622985483]
-position = Vector2(98, 57.5)
-scale = Vector2(1.4375, 0.8828125)
+position = Vector2(171, 97.5)
+scale = Vector2(2.671875, 1.5234375)
 texture = ExtResource("2_ivmpe")

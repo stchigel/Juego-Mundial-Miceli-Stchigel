@@ -23,6 +23,11 @@ Global="*uid://dpp6ny4c4d5ns"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+player="player"
+obstaculo="obstaculo"
+
 [input]
 
 saltar={
