@@ -1,6 +1,32 @@
 [gd_scene format=3 uid="uid://ck34qefhskcmu"]
 
 [ext_resource type="Script" uid="uid://vxgkhkh5drbt" path="res://src/Game/game.gd" id="1_60cvd"]
+[ext_resource type="PackedScene" uid="uid://cleow4sev1af3" path="res://src/Jugador/jugador.tscn" id="2_k6qo2"]
+[ext_resource type="Texture2D" uid="uid://v2ltbt0u0bk8" path="res://assets/icon.svg" id="2_sag4g"]
+[ext_resource type="PackedScene" uid="uid://cl7y0xndtta35" path="res://src/Enemigo/enemigo.tscn" id="4_bob6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60cvd"]
+size = Vector2(1152, 20)
 
 [node name="Game" type="Node2D" unique_id=1937971750]
 script = ExtResource("1_60cvd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1484522737]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1518943782]
+position = Vector2(576, 639)
+shape = SubResource("RectangleShape2D_60cvd")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=933709908]
+position = Vector2(578.5, 639)
+scale = Vector2(9.039062, 0.15624988)
+texture = ExtResource("2_sag4g")
+
+[node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_k6qo2")]
+position = Vector2(469, 428)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1738234946]
+position = Vector2(576, 325)
+
+[node name="Enemigo" parent="." unique_id=779072344 instance=ExtResource("4_bob6j")]
+position = Vector2(34, 464)
