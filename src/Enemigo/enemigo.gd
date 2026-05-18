@@ -1,12 +1,18 @@
 extends CharacterBody2D
 
 
-const SPEED = 200.0
+const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
 	velocity.x = SPEED
+	
+	if get_tree().get_nodes_in_group("player")[0].position.x < position.x:
+		velocity.y = -1
+	else:
+		velocity.y = 1
+		
 	move_and_slide()
 	
 	for i in get_slide_collision_count():

@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 func perder():
 	print("Perdiste")
-	get_tree().change_scene_to_file("res://src/Menu/menu.tscn")
+	if get_tree():
+		get_tree().change_scene_to_file("res://src/Menu/menu.tscn")
